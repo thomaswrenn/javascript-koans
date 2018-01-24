@@ -33,6 +33,9 @@ describe("About Higher Order Functions", function () {
     expect(numbers).toEqual(FILL_ME_IN);
   });
 
+  // NOTE FROM TOM: I left these in because they're helpful to understand common
+  // uses of map and reduce and to have more examples of using callbacks with
+  // higher order functions and understanding their comminalities and usefulness.
   it("should use 'forEach' for simple iteration", function () {
     var numbers = [1,2,3];
     var msg = "";
@@ -76,15 +79,18 @@ describe("About Higher Order Functions", function () {
       expect(_([ [1, 2], [3, 4] ]).flatten()).toEqual(FILL_ME_IN);
   });
 
-  it("should use chain() ... .value() to use multiple higher order functions", function() {
-      var result = _([ [0, 1], 2 ]).chain()
-                       .flatten()
-                       .map(function(x) { return x+1 } )
-                       .reduce(function (sum, x) { return sum + x })
-                       .value();
+  // NOTE FROM TOM: This is a feature specific to the underscore library so not
+  // useful for your interview.
+  // 
+  // it("should use chain() ... .value() to use multiple higher order functions", function() {
+  //     var result = _([ [0, 1], 2 ]).chain()
+  //                      .flatten()
+  //                      .map(function(x) { return x+1 } )
+  //                      .reduce(function (sum, x) { return sum + x })
+  //                      .value();
 
-      expect(result).toEqual(FILL_ME_IN);
-  });
+  //     expect(result).toEqual(FILL_ME_IN);
+  // });
 
 });
 

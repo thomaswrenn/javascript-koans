@@ -86,9 +86,10 @@ describe("About Objects", function () {
   });
 
 
+  // Note from Tom: Feel free to comment this out if prototype not mentioned
+  // in the curriculum. :
   it("should use prototype to add to all objects", function () {
-      function Circle(radius)
-      {
+      function Circle(radius) {
         this.radius = radius;
       }
 
